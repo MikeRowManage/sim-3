@@ -9,8 +9,8 @@ const Nav = (props) => {
         return (
             <div>
                 <div>
-                <p>{props.user.username}</p>
-                {props.user.profile_pic}
+                <p>{props.username}</p>
+                {props.profile_pic}
                 </div>
                 <button>
                 <Link to='/dashboard'>Home</Link>
@@ -28,9 +28,9 @@ const Nav = (props) => {
 }
 
 const mapStateToProps = reduxState => {
-    const {user} = reduxState
+    const {username, profile_pic} = reduxState
     return {
-        user
+        username, profile_pic
     }
 }
 

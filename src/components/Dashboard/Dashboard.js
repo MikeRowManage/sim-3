@@ -13,9 +13,9 @@ class Dashboard extends Component {
 
     }
 
-    getAllPosts = () => {
-        axios
-    }
+    // getAllPosts = () => {
+    //     axios.get(`/api/posts/${id}`)
+    // }
 
     resetSearch = () => {
         this.setState({
@@ -42,6 +42,7 @@ class Dashboard extends Component {
                 />My Posts</label>
                 <button>Search</button>
                 <button onClick={this.resetSearch}>Reset</button>
+                {postsList}
             </div>
         )
     }

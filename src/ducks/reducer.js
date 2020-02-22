@@ -1,7 +1,9 @@
 const initialState = {
-    user: {}
+    username: '',
+    profile_pic: '',
+    user_id: 0,
 }
-//may need to change to: user: {username: '', id: '', profilePicture: ''}
+
 
 const GET_USER = "GET_USER"
 const LOGOUT = "LOGOUT"
@@ -17,7 +19,7 @@ export default function reducer(state = initialState, action) {
     const {type, payload} = action
     switch (type) {
         case GET_USER:
-        return {...state, user: payload}
+        return {...state, username: payload, profile_pic: payload}
         default:
         return state
     }

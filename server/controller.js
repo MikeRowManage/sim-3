@@ -4,8 +4,10 @@ module.exports = {
       const db = req.app.get('db')
 
       const posts = await db.get_posts([id])
-      if(posts[0] && search) {
-          
+      if(posts[0]) {
+          res.status(200).send(posts)
+      } else {
+          res.sendStatus(500)
       }
-  }  
+  },  
 }

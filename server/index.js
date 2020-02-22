@@ -31,4 +31,4 @@ massive(CONNECTION_STRING)
 app.post('/api/register', authCtrl.register);
 app.post('/api/login', authCtrl.login)
 
-app.get('api/posts/:id?', ctrl.getAllPosts)
+// app.get('api/posts/:id?', ctrl.getAllPosts)
