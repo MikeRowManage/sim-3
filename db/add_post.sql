@@ -1,1 +1,2 @@
-INSERT INTO posts (username, password, profile pic) VALUES ($1, $2, $3)
+INSERT INTO posts (user_id, title, content, img) 
+VALUES ($1, $2, $3, $4)

@@ -4,19 +4,17 @@ import {Link} from 'react-router-dom'
 
 const Nav = (props) => {
    
-    
-            console.log(props)
         return (
             <div>
                 <div>
-                <p>{props.username}</p>
-                {props.profile_pic}
+                <p>{props.user.username}</p>
+                <img style={{ url: props.user.profile_pic }} alt='' />
                 </div>
                 <button>
                 <Link to='/dashboard'>Home</Link>
                 </button>
                 <button>
-                <Link to='/post/:postid'>New Post</Link>
+                <Link to='/new'>New Post</Link>
                 </button>
                 <button>
                 <Link to='/'>Logout</Link>
@@ -28,9 +26,9 @@ const Nav = (props) => {
 }
 
 const mapStateToProps = reduxState => {
-    const {username, profile_pic} = reduxState
+    const {user} = reduxState
     return {
-        username, profile_pic
+        user
     }
 }
 

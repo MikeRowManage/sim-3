@@ -15,6 +15,7 @@
 
 -- ALTER TABLE users
 -- ALTER COLUMN password TYPE TEXT;
+-- HERE IS THE ALTER TABLE STATEMENT FROM THIS SKILLS CHECK*****************
 
 -- INSERT INTO users (username, password, profile_pic) 
 -- -- VALUES ('mikescott', '1234', 'https://upload.wikimedia.org/wikipedia/en/d/dc/MichaelScott.png');

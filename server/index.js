@@ -21,7 +21,7 @@ app.use(
 massive(CONNECTION_STRING)
   .then(db => {
     app.set("db", db);
-    console.log("|---DATABASE IS A GO!--|");
+    console.log("|---DATABASE IS A GO!---|");
     app.listen(SERVER_PORT, () => {
       console.log(`|---SERVER IS A GO FOR PORT: ${SERVER_PORT}---|`);
     });
@@ -31,4 +31,6 @@ massive(CONNECTION_STRING)
 app.post('/api/register', authCtrl.register);
 app.post('/api/login', authCtrl.login)
 
-// app.get('api/posts/:id?', ctrl.getAllPosts)
+app.get(`/api/posts/:id`, ctrl.getAllPosts)
+app.get(`/api/posts/:id`, ctrl.getOnePost)
+app.post(`/api/posts/:id`, ctrl.createPost)
