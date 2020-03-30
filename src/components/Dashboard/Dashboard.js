@@ -30,6 +30,8 @@ class Dashboard extends Component {
         }).catch(err => console.log(err))
     }
 
+    //SERVER - REST(QUERIES) EXAMPLE ***************************************
+
 
     resetSearch = () => {
         axios.get(`/api/posts/${this.props.user.user_id}?search=${this.state.search}&userPosts=${this.state.userPosts}`).then(res => {

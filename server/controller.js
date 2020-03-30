@@ -13,7 +13,7 @@ module.exports = {
     } else if (userPosts === "false" && !search) {
       const notAuthor = [];
       posts.map(post => {
-        if (post.user_id !== 6) {
+        if (post.user_id !== id) {
           notAuthor.push(post);
         }
       });
@@ -25,7 +25,7 @@ module.exports = {
 
       const notAuthor = [];
       posts.map(post => {
-        if (post.user_id !== 6) {
+        if (post.user_id !== id) {
           notAuthor.push(post);
         }
       });
@@ -34,6 +34,8 @@ module.exports = {
       res.status(200).send(posts);
     }
   },
+
+  //SERVER - REST(QUERIES) EXAMPLE ***************************************
 
   getOnePost: async (req, res) => {
     const { id } = req.params;
